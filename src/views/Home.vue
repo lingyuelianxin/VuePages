@@ -4,6 +4,7 @@
     <tabs /> -->
     <!-- <child :faterToChild="faterToChildData" @childToFather="getChildData" />
     {{childToFatherData}} -->
+    新分支测试
   </div>
 </template>
 
