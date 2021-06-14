@@ -1,5 +1,21 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <formValidator></formValidator>
   </div>
 </template>
+
+<script>
+import formValidator from '../components/form-validator.vue'
+export default {
+  name: 'About',
+  components: {formValidator},
+  data(){
+    return{
+    }
+  },
+  methods:{
+  }
+}
+</script>
+<style lang="less" scoped>
+</style>

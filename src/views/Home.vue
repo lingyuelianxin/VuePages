@@ -4,7 +4,11 @@
     <tabs /> -->
     <!-- <child :faterToChild="faterToChildData" @childToFather="getChildData" />
     {{childToFatherData}} -->
-    新分支测试
+    <slotTemp>
+      <template v-slot:topSlot>topSlot</template>
+      <template v-slot:leftSlot="slotLeftFather"><div>{{slotLeftFather.slotChild.userName}}</div></template>
+      <template v-slot:rightSlot="{slotChild}">{{slotChild.userPassword}}</template><!-- 解构插槽 -->
+    </slotTemp>
   </div>
 </template>
 
@@ -12,10 +16,12 @@
 // import tabs from '../components/tabs.vue'
 // import popover from '../components/popover.vue'
 // import child from '../components/child.vue'
+import slotTemp from '../components/slot.vue'
 export default {
   name: 'Home',
   // components: {tabs,popover},
   // components:{child},
+  components:{slotTemp},
   data(){
     return{
       // faterToChildData:'父传子',
@@ -31,4 +37,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+
 </style>
