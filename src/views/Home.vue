@@ -11,6 +11,11 @@
     <!-- <webStorege v-model="searchText"/> -->
     <h1 @click="onSubmit">防抖</h1>
     <h1 @click="onSubmit1">节流</h1>
+    <!-- <slotTemp>
+      <template v-slot:topSlot>topSlot</template>
+      <template v-slot:leftSlot="slotLeftFather"><div>{{slotLeftFather.slotChild.userName}}</div></template>
+      <template v-slot:rightSlot="{slotChild}">{{slotChild.userPassword}}</template>  //解构插槽
+    </slotTemp> -->
   </div>
 </template>
 
@@ -22,19 +27,21 @@
 // import xgDatePicker from '../components/xgDatePicker.vue'
 // import exportExcel from '../components/exportExcel.vue'
 import { debounce, throttle, flatten, deepClone , newfunction } from "./utils";
-import webStorege from "../components/webStorege.vue";
+// import webStorege from "../components/webStorege.vue";
+// import slotTemp from '../components/slot.vue'
 export default {
   name: "Home",
   // components: {tabs,popover},
   // components:{child},
   // components:{xgSelect,xgDatePicker},
   // components:{exportExcel},
-  components: { webStorege },
-  data() {
-    return {
-      searchText: "",
+  // components:{slotTemp},
+  // components: { webStorege },
+  data(){
+    return{
       // faterToChildData:'父传子',
       // childToFatherData:''
+      searchText: "",
     };
   },
   created() {
@@ -127,4 +134,5 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+
 </style>
